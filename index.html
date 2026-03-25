@@ -12,9 +12,12 @@ body{background:#FAF8F4;font-family:'Cormorant Garamond',Georgia,serif;color:#1A
 .nav{background:#0F1F4D;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
 .nav-logo{color:#B5924C;font-size:19px;font-weight:600;letter-spacing:.04em}
 .nav-sub{color:rgba(255,255,255,.8);font-size:11px;letter-spacing:.16em;font-family:'Montserrat',sans-serif;font-variant:small-caps;margin-left:10px}
-.nav-links{display:flex;gap:24px}
-.nl{color:rgba(255,255,255,.55);font-size:11px;font-family:'Montserrat',sans-serif;letter-spacing:.1em;font-variant:small-caps;cursor:pointer}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nl{color:rgba(255,255,255,.55);font-size:11px;font-family:'Montserrat',sans-serif;letter-spacing:.1em;font-variant:small-caps;cursor:pointer;text-decoration:none;transition:color .2s}
+.nl:hover{color:rgba(255,255,255,.9)}
 .nl.active{color:#B5924C;border-bottom:1px solid #B5924C;padding-bottom:2px}
+.nl.cc-btn{color:#B5924C;border:1px solid rgba(181,146,76,.4);border-radius:4px;padding:4px 10px;font-size:10px}
+.nl.cc-btn:hover{background:rgba(181,146,76,.15);color:#C9A96E}
 .hero{background:#0F1F4D;padding:18px 32px 24px}
 .hg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
 .hw{background:rgba(255,255,255,.065);border:1px solid rgba(181,146,76,.25);border-radius:10px;padding:18px 20px}
@@ -34,8 +37,10 @@ body{background:#FAF8F4;font-family:'Cormorant Garamond',Georgia,serif;color:#1A
 .pr{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .ar{display:flex;gap:10px;margin-bottom:12px}
 .ql{background:#0F1F4D;border-radius:10px;padding:14px 16px}
-.qi{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer}
+.qi{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;text-decoration:none;transition:opacity .15s}
 .qi:last-child{border-bottom:none}
+.qi:hover{opacity:.75}
+.qi.cc-item{background:rgba(181,146,76,.1);border-radius:6px;padding:9px 10px;margin-bottom:6px;border:1px solid rgba(181,146,76,.25);border-bottom:1px solid rgba(181,146,76,.25) !important}
 footer{border-top:1px solid #F0EDE6;padding:12px 32px;display:flex;justify-content:space-between}
 .up{color:#2E7D32}.dn{color:#C62828}
 .upb{background:rgba(46,125,50,.18);color:#1B5E20}.dnb{background:rgba(198,40,40,.18);color:#B71C1C}
@@ -45,10 +50,16 @@ footer{border-top:1px solid #F0EDE6;padding:12px 32px;display:flex;justify-conte
 <div class="nav">
   <div style="display:flex;align-items:baseline"><span class="nav-logo">MNA</span><span class="nav-sub">Capital Advisors</span></div>
   <div class="nav-links">
-    <span class="nl active">Dashboard</span><span class="nl">Deals</span><span class="nl">CRM</span><span class="nl">Newsletter</span><span class="nl">Documents</span><span class="nl">Reports</span>
+    <span class="nl active">Dashboard</span>
+    <span class="nl">Deals</span>
+    <span class="nl">CRM</span>
+    <span class="nl">Newsletter</span>
+    <span class="nl">Documents</span>
+    <a href="https://script.google.com/a/macros/mnacaps.com/s/AKfycbwG01GDrowvBfWblRNk3TCU2OOXLQF9R1fHfIzQHeJ8hv7NF4MSZDaCnh07JTdYdtvg/exec" target="_blank" class="nl cc-btn">⌘ Command Centre</a>
   </div>
   <span style="font-size:10px;color:rgba(255,255,255,.35);font-family:'Montserrat',sans-serif">www.mnacaps.com</span>
 </div>
+
 <div class="hero">
   <div class="hg">
     <div class="hw">
@@ -82,7 +93,9 @@ footer{border-top:1px solid #F0EDE6;padding:12px 32px;display:flex;justify-conte
     </div>
   </div>
 </div>
+
 <div class="dg"></div>
+
 <div class="main">
   <div class="left">
     <div class="sg">
@@ -130,6 +143,11 @@ footer{border-top:1px solid #F0EDE6;padding:12px 32px;display:flex;justify-conte
     </div>
     <div class="ql">
       <div style="font-size:10px;color:#B5924C;font-family:'Montserrat',sans-serif;font-variant:small-caps;letter-spacing:.12em;margin-bottom:10px">Quick Launch</div>
+      <a href="https://script.google.com/a/macros/mnacaps.com/s/AKfycbwG01GDrowvBfWblRNk3TCU2OOXLQF9R1fHfIzQHeJ8hv7NF4MSZDaCnh07JTdYdtvg/exec" target="_blank" class="qi cc-item">
+        <span style="color:#B5924C;font-size:15px">⌘</span>
+        <span style="font-size:12px;color:#C9A96E;font-family:'Montserrat',sans-serif;font-weight:500">Command Centre</span>
+        <span style="margin-left:auto;font-size:9px;color:#B5924C;font-family:'Montserrat',sans-serif;letter-spacing:.06em;background:rgba(181,146,76,.15);padding:2px 6px;border-radius:3px">OPEN</span>
+      </a>
       <div class="qi"><span style="color:#B5924C;font-size:13px">◈</span><span style="font-size:12px;color:rgba(255,255,255,.7);font-family:'Montserrat',sans-serif">Generate Newsletter</span><span style="margin-left:auto;color:rgba(255,255,255,.2);font-size:11px">→</span></div>
       <div class="qi"><span style="color:#B5924C;font-size:13px">◉</span><span style="font-size:12px;color:rgba(255,255,255,.7);font-family:'Montserrat',sans-serif">Add CRM Contact</span><span style="margin-left:auto;color:rgba(255,255,255,.2);font-size:11px">→</span></div>
       <div class="qi"><span style="color:#B5924C;font-size:13px">▧</span><span style="font-size:12px;color:rgba(255,255,255,.7);font-family:'Montserrat',sans-serif">New Deal Memo</span><span style="margin-left:auto;color:rgba(255,255,255,.2);font-size:11px">→</span></div>
@@ -156,4 +174,4 @@ function upd(){sd++;bp=bv;bv*=(1+(rng(sd)-0.5)*0.0016);const bc=bv-bp,bu=bc>=0,b
 upd();setInterval(upd,3000);
 </script>
 </body>
-  </html>
+        </html>
